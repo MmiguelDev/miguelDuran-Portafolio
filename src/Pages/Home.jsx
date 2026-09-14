@@ -1,11 +1,15 @@
 import SobreMi from "../Components/SobreMi";
 import Proyects from "../Components/Proyects";
+import Contacts from "../Components/Contacts";
 
 export default function Home () {
     return (
-        <section>
+        <section id="inicio" className="scroll">
             <SobreMi/>
-            <Proyects />
+
+            <div id="proyectos" className="scroll mt-16">
+                <Proyects />
+            </div>
         </section>
     )
 }

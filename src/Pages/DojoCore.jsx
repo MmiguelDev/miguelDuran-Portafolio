@@ -1,15 +1,15 @@
 import { useState } from 'react';
 
-import login from '../assets/login.png';
-import dashboard from "../assets/dashboard.png";
-import dasboradAsistencias from "../assets/dasboradAsistencias.png"
-import asistenciaQR from "../assets/asistenciaQR.png";
-import registrarAlumnos from "../assets/registrarAlumnos.png";
-import reportes from "../assets/reportes.png";
-import cardAlumno from "../assets/CardAlumno.png";
-import editar from "../assets/editar.png";
-import protectedView from "../assets/protected.png";
-import config from "../assets/config.png";
+import login from '../assets/dojocore/login.png';
+import dashboard from "../assets/dojocore/dashboard.png";
+import dasboradAsistencias from "../assets/dojocore/dasboradAsistencias.png"
+import asistenciaQR from "../assets/dojocore/asistenciaQR.png";
+import registrarAlumnos from "../assets/dojocore/registrarAlumnos.png";
+import reportes from "../assets/dojocore/reportes.png";
+import cardAlumno from "../assets/dojocore/CardAlumno.png";
+import editar from "../assets/dojocore/editar.png";
+import protectedView from "../assets/dojocore/protected.png";
+import config from "../assets/dojocore/config.png";
 
 import ImageModal from '../Components/Modals/ImagenModal';
 

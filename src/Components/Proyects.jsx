@@ -1,4 +1,5 @@
 import DojoCoreCard from "./Cards/DojoCoreCard"
+import CalculatorTerminalisCard from "./Cards/CalcultorTerminalisCard"
 
 export default function Proyects() {
     return (
@@ -7,6 +8,7 @@ export default function Proyects() {
 
             <div className="flex flex-wrap gap-8 justify-center">
                 <DojoCoreCard />
+                <CalculatorTerminalisCard />
             </div>
         </section>
     )
