@@ -23,6 +23,12 @@ export default function SobreMi() {
                     y Bootstrap</span>.
                 </p>
 
+                <p>
+                    Tambièn, soy el fundador y director de <span className="font-semibold text-white">Data-Core</span> Proyects Software Management (registro pendiente),
+                    empresa especializada en el desarrollo de Software con el fin de innovar con patentes propias
+                    asi como ofrecer servicios de freelancing.
+                </p>
+
                 <div className="flex flex-wrap gap-2 mt-2">
                     {['JavaScript', 'PHP', 'Python', 'Java', 'React', 'Node.js', 'Electron', 'Tailwind'].map((tech) => (
                         <span

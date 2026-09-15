@@ -15,7 +15,7 @@ import ImageModal from '../Components/Modals/ImagenModal';
 
 export default function DojoCore() {
 
-    const [modalImg, setModalImg] = useState(null); // { src, alt } o null
+    const [modalImg, setModalImg] = useState(null); 
 
     const features = [
         {
@@ -158,7 +158,6 @@ export default function DojoCore() {
                 </div>
             </div>
 
-            {/* Galería de funcionalidades */}
             <div className="px-10 py-16">
                 <h2 className="text-2xl font-bold text-center mb-2">Funcionalidades</h2>
                 <p className="text-center text-gray-500 mb-10">
