@@ -20,8 +20,7 @@ export default function DojoCoreCard() {
                 </h1>
 
                 <p className="text-justify text-white/80 text-sm leading-relaxed mb-4 flex-1">
-                    Sistema para academias de artes marciales. El escritorio lleva pagos, reportes
-                    y configuración; la app del instructor cubre asistencia, alumnos y horario.
+                    La academia en el escritorio y en el tatami: alumnos, pagos y asistencia, con los datos privados fuera de la consulta pública.
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-5">
@@ -39,7 +38,7 @@ export default function DojoCoreCard() {
                     to="dojocore"
                     className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-indigo-300 transition-colors hover:gap-2 hover:text-indigo-200"
                 >
-                    Ver documentación del sitio
+                    Ver el proyecto
                 </Link>
             </div>
         </div>

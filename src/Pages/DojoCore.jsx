@@ -30,55 +30,55 @@ export default function DojoCore() {
             title: "Dashboard principal",
             img: dashboard,
             alt: "Dashboard principal de Dojo-Core",
-            desc: "Muestra las ganancias diarias, semanales y mensuales, las fechas pendientes y el calendario de actividades de la academia."
+            desc: "De un vistazo: cuánto entró hoy, esta semana y este mes, y qué tiene la academia en el calendario."
         },
         {
             title: "Dashboard de asistencias",
             img: dasboradAsistencias,
             alt: "Dashboard de asistencias de Dojo-Core",
-            desc: "Registra la asistencia del día y, si el pago no está al día, permite cobrar antes de continuar. La app del instructor hace la misma revisión desde el teléfono."
+            desc: "Pasa lista y, si el pago ya venció, cobra en el momento. Lo mismo se puede hacer desde el teléfono."
         },
         {
             title: "Asistencia por QR",
             img: asistenciaQR,
             alt: "Asistencia por código QR en Dojo-Core",
-            desc: "Cada alumno tiene un código QR propio, generado a partir de su matrícula. Se lee en el escritorio y con la cámara de la app del instructor."
+            desc: "Cada alumno trae su propio código. Se lee en la computadora o con la cámara del instructor."
         },
         {
             title: "Registro de alumnos",
             img: registrarAlumnos,
             alt: "Registro de alumnos en Dojo-Core",
-            desc: "Da de alta alumnos con sus datos de contacto y de emergencia. La matrícula la asigna el sistema y queda ligada a la academia."
+            desc: "Alta con contacto y emergencia. La matrícula la pone el sistema y queda en esa academia."
         },
         {
             title: "Ficha de alumno",
             img: cardAlumno,
             alt: "Ficha individual de alumno en Dojo-Core",
-            desc: "Reúne en una sola vista el historial, el estado de pago y los datos de contacto. Esos datos no aparecen en la consulta pública."
+            desc: "Historial, pago y contacto en una sola ficha. Teléfono y emergencia no salen en la consulta pública."
         },
         {
             title: "Edición de información",
             img: editar,
             alt: "Edición de datos en Dojo-Core",
-            desc: "Actualiza la ficha del alumno, el horario de clases y los pagos, para que la información de la academia siga al día."
+            desc: "Corrige la ficha, el horario o un pago sin salir del sistema."
         },
         {
             title: "Reportes",
             img: reportes,
             alt: "Reportes y estadísticas de Dojo-Core",
-            desc: "Resume las ganancias por semana y por mes, con gráficas y exportación a PDF, para revisar cómo va la academia."
+            desc: "La semana y el mes en gráficas, listos para guardarse en PDF."
         },
         {
             title: "Vistas protegidas",
             img: protectedView,
             alt: "Protección de vistas privadas en Dojo-Core",
-            desc: "Las secciones sensibles del sistema están protegidas mediante la contraseña del administrador, evitando que usuarios sin permisos accedan a información o acciones críticas de la academia."
+            desc: "Reportes, configuración y otras zonas sensibles piden la contraseña del administrador."
         },
         {
             title: "Panel de configuración",
             img: config,
             alt: "Panel de configuración de Dojo-Core",
-            desc: "Actualiza el nombre, la dirección, el teléfono y el precio por día de la academia. El acceso pide la contraseña del administrador."
+            desc: "Nombre, dirección, teléfono y precio por día. También pide la contraseña."
         },
     ];
 
@@ -87,49 +87,49 @@ export default function DojoCore() {
             title: "Emblema",
             img: movilInicio,
             alt: "Pantalla de inicio de la app móvil de Dojo-Core",
-            desc: "Al abrir la app aparece el emblema del samurái con el calendario. Es la marca de Dojo-Core en el teléfono del instructor."
+            desc: "La marca de Dojo-Core, lo primero que ve el instructor al abrir la app."
         },
         {
             title: "Asistencia del día",
             img: movilAsistencia,
             alt: "Captura de QR y clases del día en la app móvil",
-            desc: "El instructor elige la clase, encuadra el código del alumno y pulsa Capturar. En la captura se ven tres horarios de Jiu-Jitsu."
+            desc: "Elige la clase del día, encuadra el código y listo."
         },
         {
             title: "Búsqueda por apellido",
             img: movilBusqueda,
             alt: "Búsqueda de un alumno por apellido en la asistencia",
-            desc: "Si el QR no se lee, Lista por apellido abre el buscador. Al escribir, aparecen el nombre y la matrícula para registrar la asistencia."
+            desc: "Si el código no lee, se busca por apellido y aparece la matrícula."
         },
         {
             title: "Alta del alumno",
             img: movilAlta,
             alt: "Formulario para agregar un alumno desde el teléfono",
-            desc: "El alta pide nombre, apellidos, fecha de nacimiento, estatura, peso y el nivel: principiante, intermedio o avanzado."
+            desc: "Nombre, fecha de nacimiento, estatura, peso y nivel: principiante, intermedio o avanzado."
         },
         {
             title: "Contacto y confirmación",
             img: movilContacto,
             alt: "Datos de contacto y confirmación al guardar un alumno",
-            desc: "Más abajo van el teléfono, el correo y el contacto de emergencia. Guardar pide la contraseña del maestro, o la huella si está activada."
+            desc: "Teléfono, correo y emergencia. Para guardar hace falta la clave del maestro, o la huella."
         },
         {
             title: "Horario semanal",
             img: movilHorario,
             alt: "Horario de clases de la semana en la app móvil",
-            desc: "La pestaña Horario lista las clases de cada día, con su disciplina y su franja. Editar horario cambia esas franjas desde el teléfono."
+            desc: "Las clases de la semana, con su disciplina y su hora. Se editan desde el teléfono."
         },
         {
             title: "Eventos",
             img: movilEventos,
             alt: "Lista de eventos próximos en la app móvil",
-            desc: "En la misma pestaña, Eventos muestra lo que viene y permite agregar uno. En la captura hay un examen de cintas negras, con fecha y hora."
+            desc: "Exámenes y fechas importantes, con día y hora."
         },
         {
             title: "Ajustes y seguridad",
             img: movilAjustes,
             alt: "Ajustes de huella y búsqueda de actualizaciones",
-            desc: "Confirmar con huella guarda la clave del maestro solo en el teléfono y la borra al salir. Desde aquí también se busca una actualización de la app."
+            desc: "La huella guarda la clave solo en ese teléfono y la borra al salir. Aquí también se buscan actualizaciones."
         },
     ];
 
@@ -139,8 +139,8 @@ export default function DojoCore() {
                 <h1 className="font-bold text-3xl">
                     Dojo-<span className="text-indigo-300">Core</span>
                 </h1>
-                <h2>
-                    Por <span className="font-bold">Data-Core</span> Software Management
+                <h2 className="text-white/80">
+                    La academia, del tatami al escritorio
                 </h2>
             </div>
 
@@ -152,11 +152,10 @@ export default function DojoCore() {
 
                     <p className='text-justify'>
                         <span className="font-bold">Dojo-Core </span>
-                        es el sistema de gestión de Data-Core para academias de artes marciales y
-                        deportes de contacto. El escritorio concentra alumnos, pagos, horario, reportes
-                        y la configuración de la academia. En el tatami, el instructor usa la app móvil
-                        para pasar lista y consultar la ficha. Una página pública permite verificar a
-                        un alumno sin mostrar su teléfono, correo ni contacto de emergencia.
+                        es el sistema de Data-Core para academias de artes marciales.
+                        En el escritorio se ven los alumnos, los pagos y cómo va el mes.
+                        En el tatami, el instructor pasa lista con el teléfono.
+                        Quien escanea el código público solo ve el nombre y si el pago está al día.
                     </p>
                 </div>
 
@@ -178,21 +177,16 @@ export default function DojoCore() {
 
                 <div className='w-3/4 flex gap-12 text-justify'>
                     <p className='w-1/3'>
-                        El frontend fue desarrollado principalmente con JavaScript, usando React JS
-                        como framework principal. React divide la interfaz en piezas independientes y
-                        reutilizables llamadas componentes, lo que facilita el mantenimiento y la
-                        escalabilidad del proyecto.
+                        React construye la interfaz por piezas, así cada pantalla se arma y se
+                        cambia sin rehacer todo el programa.
                     </p>
                     <p className='w-1/3'>
-                        Tailwind, en su cuarta versión, se encarga del diseño web mediante clases de
-                        utilidad con sintaxis similar a CSS. Esto optimiza los tiempos de diseño,
-                        mantiene la consistencia visual y mejora el rendimiento, pues solo exporta
-                        las clases realmente necesarias.
+                        Tailwind da el aspecto visual y solo incluye los estilos que la
+                        pantalla realmente usa.
                     </p>
                     <p className='w-1/3'>
-                        Electron empaqueta esa interfaz como aplicación de escritorio para Windows y
-                        Linux. El programa se instala en el equipo y puede buscar una versión nueva
-                        cuando hay una actualización publicada.
+                        Electron lo instala en Windows y Linux, y avisa cuando hay una
+                        versión nueva.
                     </p>
                 </div>
             </div>
@@ -205,14 +199,13 @@ export default function DojoCore() {
 
                 <div className='w-3/4 flex gap-12 text-justify'>
                     <p className='w-1/2'>
-                        El backend está en Node.js con Express. Una sola API atiende al escritorio,
-                        a la app del instructor y a la página pública de verificación, así que los
-                        tres clientes trabajan sobre los mismos alumnos, pagos y clases.
+                        Una sola API, en Node.js y Express, atiende al escritorio, al teléfono
+                        y a la página pública. Los tres ven los mismos alumnos y los mismos pagos.
                     </p>
 
                     <p className='w-1/2'>
-                        La base de datos es PostgreSQL, con Prisma como ORM. Prisma modela alumnos,
-                        pagos, clases, asistencias y eventos, y evita escribir las consultas SQL a mano.
+                        PostgreSQL guarda la academia. Prisma organiza alumnos, clases,
+                        asistencias y eventos sin escribir el SQL a mano.
                     </p>
                 </div>
             </div>
@@ -225,16 +218,14 @@ export default function DojoCore() {
 
                 <div className='w-3/4 flex gap-12 text-justify'>
                     <p className='w-1/2'>
-                        La app móvil está hecha con Expo y React Native. El instructor inicia sesión,
-                        toma asistencia con la cámara del teléfono, da de alta y edita alumnos, arma
-                        el horario del día y registra eventos. Los reportes, las ganancias y la
-                        configuración de la academia se quedan en el escritorio.
+                        Con Expo y React Native, el instructor pasa lista, cobra, da de alta
+                        alumnos y arma el horario sin volver a la computadora. Los reportes
+                        y la configuración se quedan en el escritorio.
                     </p>
 
                     <p className='w-1/2'>
-                        La página pública de verificación muestra solo el nombre del alumno y si su
-                        pago está al día. El teléfono, el correo y el contacto de emergencia se quedan
-                        en la ficha privada, y las secciones sensibles piden la contraseña del administrador.
+                        La consulta pública enseña solo el nombre y el estado del pago.
+                        Teléfono, correo y emergencia siguen en la ficha privada.
                     </p>
                 </div>
             </div>
@@ -242,7 +233,7 @@ export default function DojoCore() {
             <div className="px-10 pb-4">
                 <h2 className="text-2xl font-bold text-center mb-2">Pantallas de la app</h2>
                 <p className="text-center text-indigo-200/70 mb-10">
-                    Lo que el instructor ve en el teléfono
+                    Pasar lista, sin salir del tatami
                 </p>
 
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
@@ -271,7 +262,7 @@ export default function DojoCore() {
             <div className="px-10 py-16">
                 <h2 className="text-2xl font-bold text-center mb-2">Funcionalidades</h2>
                 <p className="text-center text-indigo-200/70 mb-10">
-                    Un vistazo a las principales pantallas del sistema
+                    Lo que la academia revisa cada día
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
