@@ -9,19 +9,23 @@ import Home from "./Pages/Home"
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="aurora" aria-hidden="true">
+        <span className="aurora-a" />
+        <span className="aurora-b" />
+      </div>
+      <div className="relative z-10">
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="dojocore" element={<DojoCore />} />
           <Route path="integratorapp" element={<CalculatorTerminalis />} />
         </Routes>
-        <div id="contacto" className="scroll mt-16">
+        <div id="contacto" className="mt-16">
           <Contacts />
         </div>
-      </BrowserRouter>
-    </>
+      </div>
+    </BrowserRouter>
   )
 }
 

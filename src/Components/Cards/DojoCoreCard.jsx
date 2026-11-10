@@ -4,7 +4,7 @@ import login from '../../assets/dojocore/login.png';
 
 export default function DojoCoreCard() {
     return (
-        <div className="group w-80 bg-secundario text-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+        <div className="shine group w-80 overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-indigo-400/40 hover:shadow-2xl hover:shadow-indigo-950/50">
 
             <div className="overflow-hidden">
                 <img
@@ -28,7 +28,7 @@ export default function DojoCoreCard() {
                     {['Electron', 'React', 'Expo', 'PostgreSQL'].map((tech) => (
                         <span
                             key={tech}
-                            className="px-2.5 py-1 bg-white/10 border border-white/20 rounded-full text-xs font-medium"
+                            className="chip rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-xs font-medium hover:border-indigo-400 hover:bg-indigo-400/20"
                         >
                             {tech}
                         </span>
@@ -37,7 +37,7 @@ export default function DojoCoreCard() {
 
                 <Link
                     to="dojocore"
-                    className="inline-flex items-center gap-1 text-indigo-300 font-medium text-sm hover:text-indigo-200 transition-colors"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-indigo-300 transition-colors hover:gap-2 hover:text-indigo-200"
                 >
                     Ver documentación del sitio
                 </Link>

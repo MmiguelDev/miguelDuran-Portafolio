@@ -66,9 +66,9 @@ export default function CalculatorTerminalisCard() {
     ];
 
     return (
-        <section>
+        <section className="page-enter text-white">
             <div className="flex flex-col m-10 items-center gap-5" id="inegratorapp">
-                <h1 className="font-bold text-3xl text-pink-900">
+                <h1 className="font-bold text-3xl text-pink-300">
                     Integrator-App
                 </h1>
                 <h2>
@@ -150,7 +150,7 @@ export default function CalculatorTerminalisCard() {
 
             <div className="px-10 py-16">
                 <h2 className="text-2xl font-bold text-center mb-2">Funcionalidades</h2>
-                <p className="text-center text-gray-500 mb-10">
+                <p className="text-center text-indigo-200/70 mb-10">
                     Un vistazo a las principales pantallas del sistema
                 </p>
 
@@ -158,7 +158,7 @@ export default function CalculatorTerminalisCard() {
                     {features.map((feature) => (
                         <div
                             key={feature.title}
-                            className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                            className="flex flex-col items-center rounded-2xl border border-white/10 bg-white p-6 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
                         >
                             <h3 className="font-bold text-lg mb-3">{feature.title}</h3>
                             <img
