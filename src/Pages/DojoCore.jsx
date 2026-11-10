@@ -22,43 +22,43 @@ export default function DojoCore() {
             title: "Dashboard principal",
             img: dashboard,
             alt: "Dashboard principal de Dojo-Core",
-            desc: "La aplicación cuenta con un dashboard interactivo que muestra las principales métricas de la academia, como ganancias diarias, semanales y mensuales, gráficas, fechas pendientes y la distribución semanal de las actividades."
+            desc: "Muestra las ganancias diarias, semanales y mensuales, las fechas pendientes y el calendario de actividades de la academia."
         },
         {
             title: "Dashboard de asistencias",
             img: dasboradAsistencias,
             alt: "Dashboard de asistencias de Dojo-Core",
-            desc: "Esta herramienta permite tomar asistencia y confirma automáticamente el estado del pago. Si el pago no está actualizado, solicita la confirmación del administrador para continuar con la acción."
+            desc: "Registra la asistencia del día y, si el pago no está al día, permite cobrar antes de continuar. La app del instructor hace la misma revisión desde el teléfono."
         },
         {
             title: "Asistencia por QR",
             img: asistenciaQR,
             alt: "Asistencia por código QR en Dojo-Core",
-            desc: "El software permite tomar asistencia mediante códigos QR únicos por alumno, generados automáticamente a partir de su matrícula."
+            desc: "Cada alumno tiene un código QR propio, generado a partir de su matrícula. Se lee en el escritorio y con la cámara de la app del instructor."
         },
         {
             title: "Registro de alumnos",
             img: registrarAlumnos,
             alt: "Registro de alumnos en Dojo-Core",
-            desc: "Permite dar de alta nuevos alumnos de forma rápida, capturando su información y asignándolos a la academia correspondiente."
+            desc: "Da de alta alumnos con sus datos de contacto y de emergencia. La matrícula la asigna el sistema y queda ligada a la academia."
         },
         {
             title: "Ficha de alumno",
             img: cardAlumno,
             alt: "Ficha individual de alumno en Dojo-Core",
-            desc: "Muestra la información detallada de cada alumno en una sola vista, incluyendo su historial y estado dentro de la academia."
+            desc: "Reúne en una sola vista el historial, el estado de pago y los datos de contacto. Esos datos no aparecen en la consulta pública."
         },
         {
             title: "Edición de información",
             img: editar,
             alt: "Edición de datos en Dojo-Core",
-            desc: "Facilita la actualización de datos de alumnos, cursos y pagos, manteniendo la información de la academia siempre al día."
+            desc: "Actualiza la ficha del alumno, el horario de clases y los pagos, para que la información de la academia siga al día."
         },
         {
             title: "Reportes",
             img: reportes,
             alt: "Reportes y estadísticas de Dojo-Core",
-            desc: "Genera reportes visuales sobre el desempeño financiero y operativo de la academia, facilitando la toma de decisiones."
+            desc: "Resume las ganancias por semana y por mes, con gráficas y exportación a PDF, para revisar cómo va la academia."
         },
         {
             title: "Vistas protegidas",
@@ -70,7 +70,7 @@ export default function DojoCore() {
             title: "Panel de configuración",
             img: config,
             alt: "Panel de configuración de Dojo-Core",
-            desc: "Permite al administrador personalizar los parámetros generales del sistema, como datos de la academia, precios y otras preferencias, desde un solo lugar."
+            desc: "Actualiza el nombre, la dirección, el teléfono y el precio por día de la academia. El acceso pide la contraseña del administrador."
         },
     ];
 
@@ -93,10 +93,11 @@ export default function DojoCore() {
 
                     <p className='text-justify'>
                         <span className="font-bold">Dojo-Core </span>
-                        es una aplicación de escritorio diseñada para el control centralizado de academias
-                        de artes marciales y deportes de contacto. Facilita la administración financiera y
-                        la gestión general de la academia, permitiendo que maestros y encargados se
-                        enfoquen únicamente en la enseñanza de sus alumnos.
+                        es el sistema de gestión de Data-Core para academias de artes marciales y
+                        deportes de contacto. El escritorio concentra alumnos, pagos, horario, reportes
+                        y la configuración de la academia. En el tatami, el instructor usa la app móvil
+                        para pasar lista y consultar la ficha. Una página pública permite verificar a
+                        un alumno sin mostrar su teléfono, correo ni contacto de emergencia.
                     </p>
                 </div>
 
@@ -130,9 +131,9 @@ export default function DojoCore() {
                         las clases realmente necesarias.
                     </p>
                     <p className='w-1/3'>
-                        Electron combina el motor Chromium con Node.js en un solo framework, permitiendo
-                        crear aplicaciones de escritorio multiplataforma. Esto une la interfaz web con
-                        capacidades de sistema, todo dentro de un mismo entorno de desarrollo.
+                        Electron empaqueta esa interfaz como aplicación de escritorio para Windows y
+                        Linux. El programa se instala en el equipo y puede buscar una versión nueva
+                        cuando hay una actualización publicada.
                     </p>
                 </div>
             </div>
@@ -145,15 +146,36 @@ export default function DojoCore() {
 
                 <div className='w-3/4 flex gap-12 text-justify'>
                     <p className='w-1/2'>
-                        Al igual que el frontend, el backend fue desarrollado completamente con JavaScript
-                        y sus tecnologías. Para el empaquetado y la gestión de librerías se utilizó
-                        Node.js, encargado de la comunicación entre el backend y el frontend.
+                        El backend está en Node.js con Express. Una sola API atiende al escritorio,
+                        a la app del instructor y a la página pública de verificación, así que los
+                        tres clientes trabajan sobre los mismos alumnos, pagos y clases.
                     </p>
 
                     <p className='w-1/2'>
-                        En la base de datos se utiliza MySQL como gestor principal, junto con Prisma como
-                        ORM. Prisma simplifica la interacción con la base de datos, evitando la necesidad
-                        de escribir consultas SQL de manera manual.
+                        La base de datos es PostgreSQL, con Prisma como ORM. Prisma modela alumnos,
+                        pagos, clases, asistencias y eventos, y evita escribir las consultas SQL a mano.
+                    </p>
+                </div>
+            </div>
+
+            <div className='m-10 flex items-center'>
+                <div className='mb-5 w-1/4'>
+                    <h1 className='text-2xl font-bold'>App del instructor</h1>
+                    <h2 className='font-semibold'>y consulta pública</h2>
+                </div>
+
+                <div className='w-3/4 flex gap-12 text-justify'>
+                    <p className='w-1/2'>
+                        La app móvil está hecha con Expo y React Native. El instructor inicia sesión,
+                        toma asistencia con la cámara del teléfono, da de alta y edita alumnos, arma
+                        el horario del día y registra eventos. Los reportes, las ganancias y la
+                        configuración de la academia se quedan en el escritorio.
+                    </p>
+
+                    <p className='w-1/2'>
+                        La página pública de verificación muestra solo el nombre del alumno y si su
+                        pago está al día. El teléfono, el correo y el contacto de emergencia se quedan
+                        en la ficha privada, y las secciones sensibles piden la contraseña del administrador.
                     </p>
                 </div>
             </div>
