@@ -2,22 +2,12 @@ import { useState } from 'react';
 
 import login from '../assets/dojocore/login.png';
 import dashboard from "../assets/dojocore/dashboard.png";
-import dasboradAsistencias from "../assets/dojocore/dasboradAsistencias.png"
 import asistenciaQR from "../assets/dojocore/asistenciaQR.png";
-import registrarAlumnos from "../assets/dojocore/registrarAlumnos.png";
 import reportes from "../assets/dojocore/reportes.png";
 import cardAlumno from "../assets/dojocore/CardAlumno.png";
-import editar from "../assets/dojocore/editar.png";
-import protectedView from "../assets/dojocore/protected.png";
-import config from "../assets/dojocore/config.png";
-import movilInicio from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM.jpeg";
 import movilAsistencia from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (1).jpeg";
 import movilBusqueda from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (2).jpeg";
-import movilAlta from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (3).jpeg";
-import movilContacto from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (4).jpeg";
 import movilHorario from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (5).jpeg";
-import movilEventos from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (6).jpeg";
-import movilAjustes from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (7).jpeg";
 
 import ImageModal from '../Components/Modals/ImagenModal';
 
@@ -33,22 +23,10 @@ export default function DojoCore() {
             desc: "De un vistazo: cuánto entró hoy, esta semana y este mes, y qué tiene la academia en el calendario."
         },
         {
-            title: "Dashboard de asistencias",
-            img: dasboradAsistencias,
-            alt: "Dashboard de asistencias de Dojo-Core",
-            desc: "Pasa lista y, si el pago ya venció, cobra en el momento. Lo mismo se puede hacer desde el teléfono."
-        },
-        {
             title: "Asistencia por QR",
             img: asistenciaQR,
             alt: "Asistencia por código QR en Dojo-Core",
             desc: "Cada alumno trae su propio código. Se lee en la computadora o con la cámara del instructor."
-        },
-        {
-            title: "Registro de alumnos",
-            img: registrarAlumnos,
-            alt: "Registro de alumnos en Dojo-Core",
-            desc: "Alta con contacto y emergencia. La matrícula la pone el sistema y queda en esa academia."
         },
         {
             title: "Ficha de alumno",
@@ -57,38 +35,14 @@ export default function DojoCore() {
             desc: "Historial, pago y contacto en una sola ficha. Teléfono y emergencia no salen en la consulta pública."
         },
         {
-            title: "Edición de información",
-            img: editar,
-            alt: "Edición de datos en Dojo-Core",
-            desc: "Corrige la ficha, el horario o un pago sin salir del sistema."
-        },
-        {
             title: "Reportes",
             img: reportes,
             alt: "Reportes y estadísticas de Dojo-Core",
             desc: "La semana y el mes en gráficas, listos para guardarse en PDF."
         },
-        {
-            title: "Vistas protegidas",
-            img: protectedView,
-            alt: "Protección de vistas privadas en Dojo-Core",
-            desc: "Reportes, configuración y otras zonas sensibles piden la contraseña del administrador."
-        },
-        {
-            title: "Panel de configuración",
-            img: config,
-            alt: "Panel de configuración de Dojo-Core",
-            desc: "Nombre, dirección, teléfono y precio por día. También pide la contraseña."
-        },
     ];
 
     const pantallasMovil = [
-        {
-            title: "Emblema",
-            img: movilInicio,
-            alt: "Pantalla de inicio de la app móvil de Dojo-Core",
-            desc: "La marca de Dojo-Core, lo primero que ve el instructor al abrir la app."
-        },
         {
             title: "Asistencia del día",
             img: movilAsistencia,
@@ -102,34 +56,10 @@ export default function DojoCore() {
             desc: "Si el código no lee, se busca por apellido y aparece la matrícula."
         },
         {
-            title: "Alta del alumno",
-            img: movilAlta,
-            alt: "Formulario para agregar un alumno desde el teléfono",
-            desc: "Nombre, fecha de nacimiento, estatura, peso y nivel: principiante, intermedio o avanzado."
-        },
-        {
-            title: "Contacto y confirmación",
-            img: movilContacto,
-            alt: "Datos de contacto y confirmación al guardar un alumno",
-            desc: "Teléfono, correo y emergencia. Para guardar hace falta la clave del maestro, o la huella."
-        },
-        {
             title: "Horario semanal",
             img: movilHorario,
             alt: "Horario de clases de la semana en la app móvil",
             desc: "Las clases de la semana, con su disciplina y su hora. Se editan desde el teléfono."
-        },
-        {
-            title: "Eventos",
-            img: movilEventos,
-            alt: "Lista de eventos próximos en la app móvil",
-            desc: "Exámenes y fechas importantes, con día y hora."
-        },
-        {
-            title: "Ajustes y seguridad",
-            img: movilAjustes,
-            alt: "Ajustes de huella y búsqueda de actualizaciones",
-            desc: "La huella guarda la clave solo en ese teléfono y la borra al salir. Aquí también se buscan actualizaciones."
         },
     ];
 
@@ -236,21 +166,21 @@ export default function DojoCore() {
                     Pasar lista, sin salir del tatami
                 </p>
 
-                <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-3">
                     {pantallasMovil.map((pantalla) => (
                         <div
                             key={pantalla.title}
-                            className="flex h-[24rem] flex-row items-center gap-6 rounded-2xl border border-white/10 bg-white p-6 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
+                            className="flex h-40 flex-row items-center gap-3 rounded-2xl border border-white/10 bg-white p-3 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
                         >
                             <img
                                 src={pantalla.img}
                                 alt={pantalla.alt}
                                 onClick={() => setModalImg({ src: pantalla.img, alt: pantalla.alt })}
-                                className="h-80 w-36 shrink-0 object-contain bg-black rounded-xl shadow-md cursor-pointer"
+                                className="h-32 w-16 shrink-0 cursor-pointer rounded-lg bg-black object-contain shadow-md"
                             />
-                            <div className="flex flex-col gap-3 min-w-0">
-                                <h3 className="font-bold text-lg">{pantalla.title}</h3>
-                                <p className="text-justify text-sm text-gray-600">
+                            <div className="flex min-w-0 flex-col gap-1">
+                                <h3 className="font-bold text-sm">{pantalla.title}</h3>
+                                <p className="text-xs text-gray-600">
                                     {pantalla.desc}
                                 </p>
                             </div>
@@ -265,20 +195,20 @@ export default function DojoCore() {
                     Lo que la academia revisa cada día
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
                     {features.map((feature) => (
                         <div
                             key={feature.title}
-                            className="flex h-[28rem] flex-col items-center rounded-2xl border border-white/10 bg-white p-6 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
+                            className="flex h-64 flex-col items-center rounded-2xl border border-white/10 bg-white p-4 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
                         >
-                            <h3 className="font-bold text-lg mb-3">{feature.title}</h3>
+                            <h3 className="mb-2 text-center text-sm font-bold">{feature.title}</h3>
                             <img
                                 src={feature.img}
                                 alt={feature.alt}
                                 onClick={() => setModalImg({ src: feature.img, alt: feature.alt })}
-                                className="h-48 w-full object-cover rounded-xl shadow-md mb-4 transition-transform duration-300 ease-out hover:scale-105 cursor-pointer"
+                                className="mb-3 h-28 w-full cursor-pointer rounded-lg object-cover shadow-md transition-transform duration-300 ease-out hover:scale-105"
                             />
-                            <p className="text-justify text-sm text-gray-600">
+                            <p className="text-center text-xs text-gray-600">
                                 {feature.desc}
                             </p>
                         </div>
