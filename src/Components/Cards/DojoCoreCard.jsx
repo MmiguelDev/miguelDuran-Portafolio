@@ -4,17 +4,17 @@ import login from '../../assets/dojocore/login.png';
 
 export default function DojoCoreCard() {
     return (
-        <div className="shine group w-80 overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-indigo-400/40 hover:shadow-2xl hover:shadow-indigo-950/50">
+        <div className="shine group flex h-[34rem] w-80 flex-col overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-indigo-400/40 hover:shadow-2xl hover:shadow-indigo-950/50">
 
             <div className="overflow-hidden">
                 <img
                     src={login}
                     alt="Login de Dojo-Core"
-                    className="w-full h-48 object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                    className="h-48 w-full shrink-0 object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                 />
             </div>
 
-            <div className="p-6 flex flex-col">
+            <div className="flex flex-1 flex-col p-6">
                 <h1 className="font-bold text-xl mb-3">
                     Dojo-<span className="text-indigo-400">Core</span>
                 </h1>
@@ -37,7 +37,7 @@ export default function DojoCoreCard() {
 
                 <Link
                     to="dojocore"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-indigo-300 transition-colors hover:gap-2 hover:text-indigo-200"
+                    className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-indigo-300 transition-colors hover:gap-2 hover:text-indigo-200"
                 >
                     Ver documentación del sitio
                 </Link>

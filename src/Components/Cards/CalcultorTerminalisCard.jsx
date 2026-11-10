@@ -4,17 +4,17 @@ import inicio from '../../assets/integratorapp/inicio.png';
 
 export default function CalculatorTerminalisCard() {
     return (
-        <div className="shine group w-80 overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-pink-300/40 hover:shadow-2xl hover:shadow-pink-950/40">
+        <div className="shine group flex h-[34rem] w-80 flex-col overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-pink-300/40 hover:shadow-2xl hover:shadow-pink-950/40">
 
             <div className="overflow-hidden">
                 <img
                     src={inicio}
                     alt="Inicio de Integrator-App"
-                    className="h-48 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                    className="h-48 w-full shrink-0 object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                 />
             </div>
 
-            <div className="flex flex-col p-6">
+            <div className="flex flex-1 flex-col p-6">
                 <h1 className="mb-3 text-xl font-bold text-pink-300">
                     Integrator-App
                 </h1>
@@ -37,7 +37,7 @@ export default function CalculatorTerminalisCard() {
 
                 <Link
                     to="integratorapp"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-indigo-300 transition-colors hover:gap-2 hover:text-indigo-200"
+                    className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-indigo-300 transition-colors hover:gap-2 hover:text-indigo-200"
                 >
                     Ver documentación del sitio
                 </Link>

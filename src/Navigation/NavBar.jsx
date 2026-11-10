@@ -11,10 +11,7 @@ export default function NavBar() {
         const section = document.getElementById(id);
 
         if (location.pathname !== "/") {
-            navigate("/");
-            setTimeout(() => {
-                document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-            }, 100);
+            navigate("/", { state: { section: id } });
         } else if (section) {
             section.scrollIntoView({ behavior: "smooth" });
         }

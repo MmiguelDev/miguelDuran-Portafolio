@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { useEffect } from "react"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 
 import NavBar from "./Navigation/NavBar"
 import DojoCore from "./Pages/DojoCore"
@@ -6,6 +7,23 @@ import Contacts from "./Components/Contacts"
 import CalculatorTerminalis from "./Pages/CalculatorTerminalis"
 
 import Home from "./Pages/Home"
+
+function ScrollAlInicio() {
+  const location = useLocation()
+
+  useEffect(() => {
+    const seccion = location.state?.section
+    if (seccion) {
+      requestAnimationFrame(() => {
+        document.getElementById(seccion)?.scrollIntoView({ behavior: "smooth" })
+      })
+      return
+    }
+    window.scrollTo(0, 0)
+  }, [location.pathname, location.state])
+
+  return null
+}
 
 function App() {
   return (
@@ -15,6 +33,7 @@ function App() {
         <span className="aurora-b" />
       </div>
       <div className="relative z-10">
+        <ScrollAlInicio />
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />

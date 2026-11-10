@@ -249,7 +249,7 @@ export default function DojoCore() {
                     {pantallasMovil.map((pantalla) => (
                         <div
                             key={pantalla.title}
-                            className="flex flex-row items-center gap-6 rounded-2xl border border-white/10 bg-white p-6 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
+                            className="flex h-[24rem] flex-row items-center gap-6 rounded-2xl border border-white/10 bg-white p-6 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
                         >
                             <img
                                 src={pantalla.img}
@@ -278,7 +278,7 @@ export default function DojoCore() {
                     {features.map((feature) => (
                         <div
                             key={feature.title}
-                            className="flex flex-col items-center rounded-2xl border border-white/10 bg-white p-6 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
+                            className="flex h-[28rem] flex-col items-center rounded-2xl border border-white/10 bg-white p-6 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
                         >
                             <h3 className="font-bold text-lg mb-3">{feature.title}</h3>
                             <img
