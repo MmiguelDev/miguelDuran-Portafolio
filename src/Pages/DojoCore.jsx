@@ -245,22 +245,24 @@ export default function DojoCore() {
                     Lo que el instructor ve en el teléfono
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
                     {pantallasMovil.map((pantalla) => (
                         <div
                             key={pantalla.title}
-                            className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                            className="flex flex-row items-center gap-6 bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                         >
-                            <h3 className="font-bold text-lg mb-3 text-center">{pantalla.title}</h3>
                             <img
                                 src={pantalla.img}
                                 alt={pantalla.alt}
                                 onClick={() => setModalImg({ src: pantalla.img, alt: pantalla.alt })}
-                                className="h-[28rem] w-full object-contain bg-black rounded-xl shadow-md mb-4 cursor-pointer"
+                                className="h-80 w-36 shrink-0 object-contain bg-black rounded-xl shadow-md cursor-pointer"
                             />
-                            <p className="text-justify text-sm text-gray-600">
-                                {pantalla.desc}
-                            </p>
+                            <div className="flex flex-col gap-3 min-w-0">
+                                <h3 className="font-bold text-lg">{pantalla.title}</h3>
+                                <p className="text-justify text-sm text-gray-600">
+                                    {pantalla.desc}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>
