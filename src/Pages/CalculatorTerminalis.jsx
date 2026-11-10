@@ -67,7 +67,7 @@ export default function CalculatorTerminalisCard() {
 
     return (
         <section className="page-enter text-white">
-            <div className="flex flex-col m-10 items-center gap-5" id="inegratorapp">
+            <div className="flex flex-col items-center gap-3 px-6 py-10 text-center" id="inegratorapp">
                 <h1 className="font-bold text-3xl text-pink-300">
                     Integrator-App
                 </h1>
@@ -76,9 +76,9 @@ export default function CalculatorTerminalisCard() {
                 </h2>
             </div>
 
-            <div className="flex items-center bg-secundario text-white shadow-lg">
-                <div className="flex-col m-10 size-1/2 justify-center">
-                    <h1 className="text-center m-2 text-xl">
+            <div className="flex flex-col items-center bg-secundario text-white shadow-lg lg:flex-row">
+                <div className="w-full px-6 py-8 lg:w-1/2 lg:p-10">
+                    <h1 className="m-2 text-center text-xl">
                         ¿Qué es <span className="font-bold">Integrator-App</span>?
                     </h1>
 
@@ -90,36 +90,36 @@ export default function CalculatorTerminalisCard() {
                     </p>
                 </div>
 
-                <div className="flex-col m-10 size-1/2 justify-center">
+                <div className="w-full overflow-hidden px-6 pb-8 lg:w-1/2 lg:p-10">
                     <img
                         src={inicio}
-                        alt="Login de la app"
-                        onClick={() => setModalImg({ src: login, alt: "Login de la app" })}
-                        className='transition-transform duration-300 ease-out hover:scale-105 shadow-2xl cursor-pointer rounded-xl'
+                        alt="Inicio de Integrator-App"
+                        onClick={() => setModalImg({ src: inicio, alt: "Inicio de Integrator-App" })}
+                        className='w-full cursor-pointer rounded-xl shadow-2xl transition-transform duration-300 ease-out hover:scale-105'
                     />
                 </div>
             </div>
 
-            <div className='m-10 flex items-center'>
-                <div className='mb-5 w-1/4'>
+            <div className='flex flex-col gap-6 px-6 py-10 lg:flex-row lg:items-start lg:px-10'>
+                <div className='w-full lg:w-1/4'>
                     <h1 className='text-2xl font-bold'>Tecnologías utilizadas</h1>
                     <h2 className='font-semibold'>en el frontend</h2>
                 </div>
 
-                <div className='w-3/4 flex gap-12 text-justify'>
-                    <p className='w-1/3'>
+                <div className='flex w-full flex-col gap-6 text-justify md:flex-row lg:w-3/4'>
+                    <p className='md:w-1/3'>
                         El frontend fue desarrollado principalmente con JavaScript, usando React JS
                         como framework principal. React divide la interfaz en piezas independientes y
                         reutilizables llamadas componentes, lo que facilita el mantenimiento y la
                         escalabilidad del proyecto.
                     </p>
-                    <p className='w-1/3'>
+                    <p className='md:w-1/3'>
                         Tailwind, en su cuarta versión, se encarga del diseño web mediante clases de
                         utilidad con sintaxis similar a CSS. Esto optimiza los tiempos de diseño,
                         mantiene la consistencia visual y mejora el rendimiento, pues solo exporta
                         las clases realmente necesarias.
                     </p>
-                    <p className='w-1/3'>
+                    <p className='md:w-1/3'>
                         Electron combina el motor Chromium con Node.js en un solo framework, permitiendo
                         crear aplicaciones de escritorio multiplataforma. Esto une la interfaz web con
                         capacidades de sistema, todo dentro de un mismo entorno de desarrollo.
@@ -127,20 +127,20 @@ export default function CalculatorTerminalisCard() {
                 </div>
             </div>
 
-            <div className='p-10 flex items-center bg-secundario text-white shadow-lg'>
-                <div className='mb-5 w-1/4'>
+            <div className='flex flex-col gap-6 bg-secundario px-6 py-10 text-white shadow-lg lg:flex-row lg:items-start lg:px-10'>
+                <div className='w-full lg:w-1/4'>
                     <h1 className='text-2xl font-bold'>Tecnologías utilizadas</h1>
                     <h2 className='font-semibold'>en el cálculo de la integral.</h2>
                 </div>
 
-                <div className='w-3/4 flex gap-12 text-justify'>
-                    <p className='w-1/2'>
+                <div className='flex w-full flex-col gap-6 text-justify md:flex-row lg:w-3/4'>
+                    <p className='md:w-1/2'>
                         En la logica de la integral se utilizan math.js, esta es una librería que amplifica las
                         capacidades matemáticas nativas de JavaScript soportando tipos de datos comlpejos como
                         fracciones, unidades de medida y matrices.
                     </p>
 
-                    <p className='w-1/2'>
+                    <p className='md:w-1/2'>
                         Por la parte del renderizado de la integral se utiliza anime.js, el cual es una
                         libreria de animacion ligera que permite crear animaciones por medio de un API,
                         funciona animando casi cada cualquier cosa basada en la web.
@@ -148,7 +148,7 @@ export default function CalculatorTerminalisCard() {
                 </div>
             </div>
 
-            <div className="px-10 py-16">
+            <div className="px-4 py-12 sm:px-6 md:px-10 md:py-16">
                 <h2 className="text-2xl font-bold text-center mb-2">Funcionalidades</h2>
                 <p className="text-center text-indigo-200/70 mb-10">
                     Un vistazo a las principales pantallas del sistema
@@ -158,7 +158,7 @@ export default function CalculatorTerminalisCard() {
                     {features.map((feature) => (
                         <div
                             key={feature.title}
-                            className="flex h-[28rem] flex-col items-center rounded-2xl border border-white/10 bg-white p-6 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
+                            className="flex h-[28rem] flex-col items-center overflow-hidden rounded-2xl border border-white/10 bg-white p-6 text-primario shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
                         >
                             <h3 className="font-bold text-lg mb-3">{feature.title}</h3>
                             <img

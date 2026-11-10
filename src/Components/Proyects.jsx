@@ -9,11 +9,11 @@ export default function Proyects() {
                 Proyectos <span className="text-indigo-400">desarrollados</span>
             </h1>
 
-            <div className="flex flex-wrap justify-center gap-8">
-                <Reveal>
+            <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center">
+                <Reveal className="w-full max-w-80">
                     <DojoCoreCard />
                 </Reveal>
-                <Reveal delay={140}>
+                <Reveal className="w-full max-w-80" delay={140}>
                     <CalculatorTerminalisCard />
                 </Reveal>
             </div>

@@ -4,7 +4,7 @@ import login from '../../assets/dojocore/login.png';
 
 export default function DojoCoreCard() {
     return (
-        <div className="shine group flex h-[34rem] w-80 flex-col overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-indigo-400/40 hover:shadow-2xl hover:shadow-indigo-950/50">
+        <div className="shine group flex h-[34rem] w-full max-w-80 flex-col overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-indigo-400/40 hover:shadow-2xl hover:shadow-indigo-950/50">
 
             <div className="overflow-hidden">
                 <img

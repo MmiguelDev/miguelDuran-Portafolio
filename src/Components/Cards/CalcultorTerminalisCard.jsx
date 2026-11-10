@@ -4,7 +4,7 @@ import inicio from '../../assets/integratorapp/inicio.png';
 
 export default function CalculatorTerminalisCard() {
     return (
-        <div className="shine group flex h-[34rem] w-80 flex-col overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-pink-300/40 hover:shadow-2xl hover:shadow-pink-950/40">
+        <div className="shine group flex h-[34rem] w-full max-w-80 flex-col overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-pink-300/40 hover:shadow-2xl hover:shadow-pink-950/40">
 
             <div className="overflow-hidden">
                 <img

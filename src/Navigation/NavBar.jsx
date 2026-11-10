@@ -25,9 +25,9 @@ export default function NavBar() {
 
     return (
         <header className="sticky top-0 z-50 border-b border-white/10 bg-primario/80 shadow-lg backdrop-blur-md">
-            <div className="flex h-16 items-center justify-between px-6">
-                <Link to="/" className="group flex items-center gap-2">
-                    <span className="text-xl font-bold tracking-tight text-white transition-colors group-hover:text-indigo-300">
+            <div className="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
+                <Link to="/" className="group flex min-w-0 items-center gap-2">
+                    <span className="truncate text-base font-bold tracking-tight text-white transition-colors group-hover:text-indigo-300 sm:text-xl">
                         Tecn. Miguel Durán
                     </span>
                     <span className="hidden text-sm font-light text-white/60 sm:inline">
