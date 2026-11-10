@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 export default function ImageModal({ isOpen, onClose, src, alt }) {
 
@@ -21,9 +22,9 @@ export default function ImageModal({ isOpen, onClose, src, alt }) {
 
     if (!isOpen) return null;
 
-    return (
+    return createPortal(
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn"
+            className="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn"
             onClick={onClose}
         >
             <button
@@ -37,9 +38,10 @@ export default function ImageModal({ isOpen, onClose, src, alt }) {
             <img
                 src={src}
                 alt={alt}
-                onClick={(e) => e.stopPropagation()} // evita que el click en la imagen cierre el modal
-                className="max-h-[90vh] max-w-[90vw] rounded-xl shadow-2xl animate-scaleIn"
+                onClick={(e) => e.stopPropagation()}
+                className="modal-imagen rounded-xl shadow-2xl"
             />
-        </div>
+        </div>,
+        document.body
     );
 }
