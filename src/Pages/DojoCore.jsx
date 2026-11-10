@@ -10,6 +10,14 @@ import cardAlumno from "../assets/dojocore/CardAlumno.png";
 import editar from "../assets/dojocore/editar.png";
 import protectedView from "../assets/dojocore/protected.png";
 import config from "../assets/dojocore/config.png";
+import movilInicio from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM.jpeg";
+import movilAsistencia from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (1).jpeg";
+import movilBusqueda from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (2).jpeg";
+import movilAlta from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (3).jpeg";
+import movilContacto from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (4).jpeg";
+import movilHorario from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (5).jpeg";
+import movilEventos from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (6).jpeg";
+import movilAjustes from "../assets/dojocore/mobil/WhatsApp Image 2026-11-10 at 10.23.07 AM (7).jpeg";
 
 import ImageModal from '../Components/Modals/ImagenModal';
 
@@ -71,6 +79,57 @@ export default function DojoCore() {
             img: config,
             alt: "Panel de configuración de Dojo-Core",
             desc: "Actualiza el nombre, la dirección, el teléfono y el precio por día de la academia. El acceso pide la contraseña del administrador."
+        },
+    ];
+
+    const pantallasMovil = [
+        {
+            title: "Emblema",
+            img: movilInicio,
+            alt: "Pantalla de inicio de la app móvil de Dojo-Core",
+            desc: "Al abrir la app aparece el emblema del samurái con el calendario. Es la marca de Dojo-Core en el teléfono del instructor."
+        },
+        {
+            title: "Asistencia del día",
+            img: movilAsistencia,
+            alt: "Captura de QR y clases del día en la app móvil",
+            desc: "El instructor elige la clase, encuadra el código del alumno y pulsa Capturar. En la captura se ven tres horarios de Jiu-Jitsu."
+        },
+        {
+            title: "Búsqueda por apellido",
+            img: movilBusqueda,
+            alt: "Búsqueda de un alumno por apellido en la asistencia",
+            desc: "Si el QR no se lee, Lista por apellido abre el buscador. Al escribir, aparecen el nombre y la matrícula para registrar la asistencia."
+        },
+        {
+            title: "Alta del alumno",
+            img: movilAlta,
+            alt: "Formulario para agregar un alumno desde el teléfono",
+            desc: "El alta pide nombre, apellidos, fecha de nacimiento, estatura, peso y el nivel: principiante, intermedio o avanzado."
+        },
+        {
+            title: "Contacto y confirmación",
+            img: movilContacto,
+            alt: "Datos de contacto y confirmación al guardar un alumno",
+            desc: "Más abajo van el teléfono, el correo y el contacto de emergencia. Guardar pide la contraseña del maestro, o la huella si está activada."
+        },
+        {
+            title: "Horario semanal",
+            img: movilHorario,
+            alt: "Horario de clases de la semana en la app móvil",
+            desc: "La pestaña Horario lista las clases de cada día, con su disciplina y su franja. Editar horario cambia esas franjas desde el teléfono."
+        },
+        {
+            title: "Eventos",
+            img: movilEventos,
+            alt: "Lista de eventos próximos en la app móvil",
+            desc: "En la misma pestaña, Eventos muestra lo que viene y permite agregar uno. En la captura hay un examen de cintas negras, con fecha y hora."
+        },
+        {
+            title: "Ajustes y seguridad",
+            img: movilAjustes,
+            alt: "Ajustes de huella y búsqueda de actualizaciones",
+            desc: "Confirmar con huella guarda la clave del maestro solo en el teléfono y la borra al salir. Desde aquí también se busca una actualización de la app."
         },
     ];
 
@@ -177,6 +236,33 @@ export default function DojoCore() {
                         pago está al día. El teléfono, el correo y el contacto de emergencia se quedan
                         en la ficha privada, y las secciones sensibles piden la contraseña del administrador.
                     </p>
+                </div>
+            </div>
+
+            <div className="px-10 pb-4">
+                <h2 className="text-2xl font-bold text-center mb-2">Pantallas de la app</h2>
+                <p className="text-center text-gray-500 mb-10">
+                    Lo que el instructor ve en el teléfono
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {pantallasMovil.map((pantalla) => (
+                        <div
+                            key={pantalla.title}
+                            className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                        >
+                            <h3 className="font-bold text-lg mb-3 text-center">{pantalla.title}</h3>
+                            <img
+                                src={pantalla.img}
+                                alt={pantalla.alt}
+                                onClick={() => setModalImg({ src: pantalla.img, alt: pantalla.alt })}
+                                className="h-[28rem] w-full object-contain bg-black rounded-xl shadow-md mb-4 cursor-pointer"
+                            />
+                            <p className="text-justify text-sm text-gray-600">
+                                {pantalla.desc}
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
 
