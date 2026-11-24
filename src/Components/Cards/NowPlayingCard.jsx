@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
 
-import bloqueo from '../../assets/nowplaying/bloqueo-gato.png';
+import icono from '../../assets/nowplaying/icon.svg';
 
 export default function NowPlayingCard() {
     return (
         <div className="shine group flex h-[34rem] w-full max-w-80 flex-col overflow-hidden rounded-2xl border border-white/10 bg-secundario text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:border-emerald-300/40 hover:shadow-2xl hover:shadow-emerald-950/40">
 
-            <div className="overflow-hidden">
+            <div className="flex h-48 shrink-0 items-center justify-center bg-[#101114]">
                 <img
-                    src={bloqueo}
-                    alt="Portada de la canción en la pantalla de bloqueo"
-                    className="h-48 w-full shrink-0 object-cover object-top transition-transform duration-500 ease-out group-hover:scale-110"
+                    src={icono}
+                    alt="Icono de Now Playing"
+                    className="h-28 w-28 rounded-[1.75rem] shadow-lg transition-transform duration-500 ease-out group-hover:scale-110"
                 />
             </div>
 
