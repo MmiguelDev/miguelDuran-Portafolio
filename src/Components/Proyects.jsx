@@ -1,5 +1,6 @@
 import DojoCoreCard from "./Cards/DojoCoreCard"
 import CalculatorTerminalisCard from "./Cards/CalcultorTerminalisCard"
+import NowPlayingCard from "./Cards/NowPlayingCard"
 import Reveal from "./Reveal"
 
 export default function Proyects() {
@@ -15,6 +16,9 @@ export default function Proyects() {
                 </Reveal>
                 <Reveal className="w-full max-w-80" delay={140}>
                     <CalculatorTerminalisCard />
+                </Reveal>
+                <Reveal className="w-full max-w-80" delay={220}>
+                    <NowPlayingCard />
                 </Reveal>
             </div>
         </section>

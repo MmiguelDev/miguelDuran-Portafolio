@@ -5,6 +5,7 @@ import NavBar from "./Navigation/NavBar"
 import DojoCore from "./Pages/DojoCore"
 import Contacts from "./Components/Contacts"
 import CalculatorTerminalis from "./Pages/CalculatorTerminalis"
+import NowPlaying from "./Pages/NowPlaying"
 
 import Home from "./Pages/Home"
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="dojocore" element={<DojoCore />} />
           <Route path="integratorapp" element={<CalculatorTerminalis />} />
+          <Route path="nowplaying" element={<NowPlaying />} />
         </Routes>
         <div id="contacto" className="mt-16">
           <Contacts />
